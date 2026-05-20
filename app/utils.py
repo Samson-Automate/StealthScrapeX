@@ -13,6 +13,9 @@ else:
 
 def get_random_proxy():
     return random.choice(PROXIES)
+
+os.makedirs("data", exist_ok=True)
+
 import logging
 
 logging.basicConfig(
