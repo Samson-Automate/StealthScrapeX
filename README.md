@@ -73,13 +73,21 @@ cd StealthScrapeX
 
 ## 2️⃣ Install Dependencies
 
-py -m pip install -r requirements.txt
+### Windows
+python -m pip install -r requirements.txt
+
+### Mac/Linux
+python3 -m pip install -r requirements.txt
 
 ---
 
 ## 3️⃣ Install Playwright (IMPORTANT)
 
-py -m playwright install
+### Windows
+python -m playwright install
+
+### Mac/Linux
+python3 -m playwright install
 
 👉 Without this step, scraper will NOT work ❌
 
@@ -95,7 +103,11 @@ redis-server
 
 ## 🟢 Start API
 
-py -m uvicorn app.main:app --reload
+### Windows
+python -m uvicorn app.main:app --reload
+
+### Mac/Linux
+python3 -m uvicorn app.main:app --reload
 
 ---
 
@@ -103,7 +115,11 @@ py -m uvicorn app.main:app --reload
 
 Open another terminal:
 
-py -m workers.worker
+### Windows
+python -m workers.worker
+
+### Mac/Linux
+python3 -m workers.worker
 
 ---
 
@@ -158,9 +174,15 @@ If not provided, the scraper will run without proxies.
 
 # ⚡ Scaling
 
-py -m workers.worker  
-py -m workers.worker  
-py -m workers.worker  
+## Windows
+python -m workers.worker  
+python -m workers.worker  
+python -m workers.worker
+
+## Mac/Linux
+python3 -m workers.worker  
+python3 -m workers.worker  
+python3 -m workers.worker
 
 ---
 
@@ -196,4 +218,3 @@ If you like this project:
 
 👉 Star the repo  
 👉 Share on LinkedIn 🚀
-3
