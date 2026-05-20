@@ -108,8 +108,11 @@ py -m workers.worker
 ---
 
 ## 🌐 Open API Docs
-
+After starting the server, open this in your browser:
 http://127.0.0.1:8000/docs
+
+👉 This runs locally on YOUR machine.
+Make sure the server is running first.
 
 ---
 
@@ -193,3 +196,4 @@ If you like this project:
 
 👉 Star the repo  
 👉 Share on LinkedIn 🚀
+3
