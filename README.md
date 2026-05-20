@@ -66,7 +66,7 @@ StealthScrapeX/
 
 ## 1️⃣ Clone Repository
 
-git clone https://github.com/YOUR-USERNAME/StealthScrapeX.git
+git clone https://github.com/Samson-Automate/StealthScrapeX.git
 cd StealthScrapeX
 
 ---
