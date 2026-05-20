@@ -1,4 +1,4 @@
-<img width="1774" height="887" alt="ChatGPT Image May 19, 2026, 02_12_13 AM" src="https://github.com/user-attachments/assets/64a5f612-4f59-4525-831c-3b73cdb87ac8" /># 🚀 StealthScrapeX — Advanced Stealth Web Scraper
+# 🚀 StealthScrapeX — Advanced Stealth Web Scraper
 
 ![Banner](assets/banner.png)
 
@@ -178,10 +178,10 @@ This project demonstrates:
 
 ---
 
-# 📬 Contact
+## 📬 Contact
 
-💼 GitHub: https://github.com/YOUR-USERNAME  
-💰 Fiverr: https://www.fiverr.com/YOUR-USERNAME  
+- 💼 GitHub: https://github.com/Samson-Automate  
+- 💰 Hire Me on Fiverr: https://www.fiverr.com/s/LdrLlwY
 
 ---
 
