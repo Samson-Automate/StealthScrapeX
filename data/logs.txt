@@ -1,3 +1,0 @@
-2026-05-19 01:53:40,280 - INFO - [Attempt 1] Using proxy: None
-2026-05-19 01:53:40,281 - INFO - Opening: https://example.com
-2026-05-19 01:53:45,004 - INFO - Scraped Title: Example Domain
