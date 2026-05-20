@@ -1,10 +1,17 @@
 from playwright.sync_api import sync_playwright
 import time
+from datetime import datetime
 import random
+import os
 from app.utils import get_random_proxy, logger
 
+# Auto-create data folder if it doesn't exist
+os.makedirs("data", exist_ok=True)
+open("data/output.json", "a").close()
 
 def scrape(url, retries=3):
+    proxy = None  # safe default
+
     for attempt in range(retries):
         try:
             proxy = get_random_proxy()
@@ -35,19 +42,25 @@ def scrape(url, retries=3):
 
                 browser.close()
 
+                # SUCCESS RETURN
                 return {
                     "url": url,
                     "title": title,
-                    "proxy": proxy
+                    "timestamp": datetime.now().isoformat(),
+                    "proxy": proxy,
+                    "status": "success"
                 }
 
         except Exception as e:
-            logger.error(f"Error: {e}")
+            logger.exception("Scraping failed")
             logger.info("Retrying...\n")
             time.sleep(2)
 
-    # If all retries fail
+    # FAILED CASE (after retries)
     return {
         "url": url,
-        "error": "Failed after retries"
+        "title": None,
+        "timestamp": datetime.now().isoformat(),
+        "proxy": proxy,
+        "status": "failed"
     }
