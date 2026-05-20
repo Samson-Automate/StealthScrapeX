@@ -139,6 +139,8 @@ Saved in:
 
 data/logs.txt
 
+📁 The `data/` folder is automatically created if not present.
+
 ---
 
 # 🌐 Proxy Support (Optional)
