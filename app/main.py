@@ -3,11 +3,17 @@ from app.queue import add_job
 
 app = FastAPI()
 
+# Health Check Endpoint 
 @app.get("/")
-def home():
-    return {"message": "Scraper running"}
+def health():
+    return {"status": "running"}
 
+# Scrape Endpoint
 @app.post("/scrape")
 def scrape_url(url: str):
     add_job(url)
-    return {"status": "added to queue"}
+    return {
+        "message": "URL added to queue",
+        "url": url,
+        "status": "processing"
+    }
