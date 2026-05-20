@@ -1,4 +1,4 @@
-# 🚀 Advanced Stealth Web Scraper
+<img width="1774" height="887" alt="ChatGPT Image May 19, 2026, 02_12_13 AM" src="https://github.com/user-attachments/assets/64a5f612-4f59-4525-831c-3b73cdb87ac8" /># 🚀 StealthScrapeX — Advanced Stealth Web Scraper
 
 ![Banner](assets/banner.png)
 
@@ -6,7 +6,7 @@ A powerful, production-ready web scraping system built with **FastAPI, Playwrigh
 
 ---
 
-# 🧠 Features
+## 🧠 Features
 
 ✅ Headless browser scraping (Playwright)  
 ✅ Background job processing (Redis + Worker)  
@@ -17,84 +17,77 @@ A powerful, production-ready web scraping system built with **FastAPI, Playwrigh
 
 ---
 
-# 📸 API Preview
-
-![API Docs](assets/api-docs.png)
-
----
-
-# 🏗️ Architecture
+# 🏗️ System Architecture
 
 ![Architecture](assets/architecture.png)
 
-Flow:
+👉 High-level workflow showing how requests move through FastAPI → Redis → Worker → Scraper → Output.
 
-```
-Client → FastAPI → Redis Queue → Worker → Scraper → Output
-```
+---
+
+# 📸 API (FastAPI Swagger UI)
+
+![API Docs](assets/api-docs.png)
+
+👉 Interactive API where users can send scraping requests easily.
+
+---
+
+# 💻 Worker Execution (Terminal)
+
+![Worker](assets/worker-terminal.png)
+
+👉 Worker continuously listens to Redis queue and processes scraping jobs.
+
+---
+
+# ⚙️ Backend Running (Server Logs)
+
+![Server](assets/server-terminal.png)
+
+👉 FastAPI server handling requests and pushing jobs to Redis queue.
 
 ---
 
 # 📁 Project Structure
 
-```
-stealth_scraper/
+StealthScrapeX/
 │
 ├── app/
 ├── workers/
 ├── data/
 ├── assets/
-├── .env
 ├── requirements.txt
 └── README.md
-```
 
 ---
 
 # ⚙️ Installation
 
-## 1️⃣ Clone
+## 1️⃣ Clone Repository
 
-```
-git clone https://github.com/your-username/stealth_scraper.git
-cd stealth_scraper
-```
+git clone https://github.com/YOUR-USERNAME/StealthScrapeX.git
+cd StealthScrapeX
 
 ---
 
-## 2️⃣ Install dependencies
+## 2️⃣ Install Dependencies
 
-```
 py -m pip install -r requirements.txt
-```
 
 ---
 
 ## 3️⃣ Install Playwright (IMPORTANT)
 
-```
 py -m playwright install
-```
 
 👉 Without this step, scraper will NOT work ❌
 
 ---
 
-## 4️⃣ Install & Run Redis
+## 4️⃣ Run Redis
 
-```
 redis-server
-```
-
----
-
-# 🔐 Environment Setup
-
-Create `.env` file:
-
-```
-PROXIES=
-```
 
 ---
 
@@ -102,9 +95,7 @@ PROXIES=
 
 ## 🟢 Start API
 
-```
 py -m uvicorn app.main:app --reload
-```
 
 ---
 
@@ -112,29 +103,23 @@ py -m uvicorn app.main:app --reload
 
 Open another terminal:
 
-```
 py -m workers.worker
-```
 
 ---
 
-## 🌐 Open Docs
+## 🌐 Open API Docs
 
-```
 http://127.0.0.1:8000/docs
-```
 
 ---
 
 ## 🚀 Run Scraper
 
-1. Open `/scrape`  
+1. Open /scrape  
 2. Click "Try it out"  
 3. Enter URL:
 
-```
 https://example.com
-```
 
 4. Click Execute  
 
@@ -144,9 +129,7 @@ https://example.com
 
 Saved in:
 
-```
 data/output.json
-```
 
 ---
 
@@ -154,27 +137,15 @@ data/output.json
 
 Saved in:
 
-```
 data/logs.txt
-```
-
----
-
-# 🔁 Retry System
-
-- Automatically retries on failure  
-- Prevents crashes  
-- Improves reliability  
 
 ---
 
 # 🌐 Proxy Support (Optional)
 
-You can add proxies using a `.env` file:
+You can add proxies using a .env file:
 
-```
 PROXIES=http://user:pass@proxy1:port,http://user:pass@proxy2:port
-```
 
 If not provided, the scraper will run without proxies.
 
@@ -182,20 +153,16 @@ If not provided, the scraper will run without proxies.
 
 # ⚡ Scaling
 
-Run multiple workers:
-
-```
-py -m workers.worker
-py -m workers.worker
-py -m workers.worker
-```
+py -m workers.worker  
+py -m workers.worker  
+py -m workers.worker  
 
 ---
 
 # ⚠️ Notes
 
 - Redis must be running  
-- Do not upload `.env` to GitHub  
+- Do NOT upload .env to GitHub  
 - Free proxies may fail  
 - Use paid proxies for production  
 
@@ -213,4 +180,14 @@ This project demonstrates:
 
 # 📬 Contact
 
-Feel free to connect 🚀
+💼 GitHub: https://github.com/YOUR-USERNAME  
+💰 Fiverr: https://www.fiverr.com/YOUR-USERNAME  
+
+---
+
+# ⭐ Support
+
+If you like this project:
+
+👉 Star the repo  
+👉 Share on LinkedIn 🚀
